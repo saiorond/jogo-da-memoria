@@ -9,4 +9,5 @@ const validarInput = ({target}) => {
     }
 }
 
-input.addEventListener("input", validarInput)
+input.addEventListener("input", validarInput);
+console.log(validarInput)

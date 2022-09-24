@@ -14,6 +14,7 @@ const validarInput = ({target}) => {
 const eviandoFormulario = (event) => {
     event.preventDefault();
     localStorage.setItem('player', input.value);
+    window.location = 'paginas/jogo.html';
 }
 
 input.addEventListener("input", validarInput);

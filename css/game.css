@@ -2,12 +2,52 @@
     font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+body {
+    background-image: url('../imagens/12291174_713864062048952_1822291170468321814_o.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 
+.card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    border-radius: 5px;
+    background-color: red;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(139, 69, 19, 0.697);
+    border-radius: 5px;
+}
+
+.front {
+    background-image: url('../imagens/chato56.jpg');
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-image: url('../imagens/carta-virada.jpg');
+    backface-visibility: hidden;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}

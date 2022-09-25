@@ -2,12 +2,12 @@
     font-family: 'Alegreya Sans SC', sans-serif;
 }
 
-body {
+/*body {
     background-image: url('../imagens/12291174_713864062048952_1822291170468321814_o.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
+}*/
 
 .grid {
     display: grid;
@@ -39,7 +39,7 @@ body {
 }
 
 .front {
-    background-image: url('../imagens/chato56.jpg');
+    background-image: url('../imagens/A\ jogador\ de\ polo.jpg');
     transform: rotateY(180deg);
 }
 

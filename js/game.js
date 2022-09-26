@@ -38,7 +38,9 @@ const criarCartas = (personagem) => {
 const carregarJogo = () => {
     const arreyDuplicado = [ ...personagens, ...personagens];
 
-    arreyDuplicado.forEach((personagem) => {
+    const arreyEmbaralhado = arreyDuplicado.sort(() => Math.random() -0.5);
+
+    arreyEmbaralhado.forEach((personagem) => {
 
         const card = criarCartas(personagem);
         grid.appendChild(card);

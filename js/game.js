@@ -25,6 +25,32 @@ const criarElemento = (tag, className) => {
 let primeiraCarta = '';
 let segundaCarta = '';
 
+const checarCarta = () => {
+    const primeiroPersonagem = primeiraCarta.getAttribute('data-personagem');
+    const segundoPersonagem = segundaCarta.getAttribute('data-personagem');
+
+    if (primeiroPersonagem === segundoPersonagem) {
+        primeiraCarta.firstChild.classList.add('acertou');
+        segundaCarta.firstChild.classList.add('acertou');
+
+        primeiraCarta = '';
+        segundaCarta = '';
+
+    } else {
+        setTimeout(() => {
+
+            primeiraCarta.classList.remove('revelar-carta');
+            segundaCarta.classList.remove('revelar-carta');
+
+            primeiraCarta = '';
+            segundaCarta = '';
+
+        }, 600)
+        
+    }
+
+}
+
 const revelarCarta = ({target}) => {
     if(target.parentNode.className.includes('revelar-carta')) {
         return;
@@ -36,8 +62,9 @@ const revelarCarta = ({target}) => {
     } else if (segundaCarta === '') {
         target.parentNode.classList.add('revelar-carta');
         segundaCarta = target.parentNode;
+        
+        checarCarta();
     }
-    
 }
 
 const criarCartas = (personagem) => {
@@ -51,6 +78,7 @@ const criarCartas = (personagem) => {
     card.appendChild(back);
 
     card.addEventListener('click', revelarCarta);
+    card.setAttribute('data-personagem', personagem)
 
     return card;
 }

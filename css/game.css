@@ -47,6 +47,6 @@
     backface-visibility: hidden;
 }
 
-.card:hover {
+.revelar-carta {
     transform: rotateY(180deg);
 }

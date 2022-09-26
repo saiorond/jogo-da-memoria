@@ -22,6 +22,24 @@ const criarElemento = (tag, className) => {
     return elemento;
 }
 
+let primeiraCarta = '';
+let segundaCarta = '';
+
+const revelarCarta = ({target}) => {
+    if(target.parentNode.className.includes('revelar-carta')) {
+        return;
+    }
+
+    if (primeiraCarta === '') {
+        target.parentNode.classList.add('revelar-carta');
+        primeiraCarta = target.parentNode;
+    } else if (segundaCarta === '') {
+        target.parentNode.classList.add('revelar-carta');
+        segundaCarta = target.parentNode;
+    }
+    
+}
+
 const criarCartas = (personagem) => {
     const card = criarElemento('div', 'card');
     const front = criarElemento('div', 'face front');
@@ -31,6 +49,8 @@ const criarCartas = (personagem) => {
 
     card.appendChild(front);
     card.appendChild(back);
+
+    card.addEventListener('click', revelarCarta);
 
     return card;
 }

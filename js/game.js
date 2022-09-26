@@ -1,12 +1,12 @@
 const grid = document.querySelector('.grid');
 
-const cards = [
+const personagens = [
     'a fror dite',
     'E A TIA2',
     'hefestas',
     'Hera cles4',
     'mês dela',
-    'Palas atenta',
+    'Palas atenta1',
     'hera4',
     'po, sei don',
     'TUDO PELOS ARES3',
@@ -18,13 +18,16 @@ const cards = [
 const criarElemento = (tag, className) => {
     const elemento = document.createElement(tag);
     elemento.className = className;
+
     return elemento;
 }
 
-const criarCartas = () => {
+const criarCartas = (personagem) => {
     const card = criarElemento('div', 'card');
     const front = criarElemento('div', 'face front');
     const back = criarElemento('div', 'face back');
+
+    front.style.backgroundImage = `url('../cartas/${personagem}.jpg')`
 
     card.appendChild(front);
     card.appendChild(back);
@@ -32,4 +35,14 @@ const criarCartas = () => {
     return card;
 }
 
-criarCartas();
+const carregarJogo = () => {
+    const arreyDuplicado = [ ...personagens, ...personagens];
+
+    arreyDuplicado.forEach((personagem) => {
+
+        const card = criarCartas(personagem);
+        grid.appendChild(card);
+    });
+}
+
+carregarJogo()

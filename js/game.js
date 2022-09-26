@@ -1,18 +1,35 @@
 const grid = document.querySelector('.grid');
 
-const criarCartas = () => {
-    const card = document.createElement('div');
-    const front = document.createElement('div');
-    const back = document.createElement('div');
+const cards = [
+    'a fror dite',
+    'E A TIA2',
+    'hefestas',
+    'Hera cles4',
+    'mês dela',
+    'Palas atenta',
+    'hera4',
+    'po, sei don',
+    'TUDO PELOS ARES3',
+    'zeus2',
+    'A jogador de polo',
+    'arte da mis'
+]
 
-    card.className = 'card';
-    front.className = 'face front';
-    back.className = 'face back';
+const criarElemento = (tag, className) => {
+    const elemento = document.createElement(tag);
+    elemento.className = className;
+    return elemento;
+}
+
+const criarCartas = () => {
+    const card = criarElemento('div', 'card');
+    const front = criarElemento('div', 'face front');
+    const back = criarElemento('div', 'face back');
 
     card.appendChild(front);
     card.appendChild(back);
 
-    grid.appendChild(card);
+    return card;
 }
 
 criarCartas();

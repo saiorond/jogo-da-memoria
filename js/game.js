@@ -25,6 +25,14 @@ const criarElemento = (tag, className) => {
 let primeiraCarta = '';
 let segundaCarta = '';
 
+const fimDeJogo = () => {
+    const desabilitarCartas = document.querySelectorAll('.acertou');
+
+    if (desabilitarCartas.length === 24) {
+        alert("Parabéns, você venceu!")
+    }
+}
+
 const checarCarta = () => {
     const primeiroPersonagem = primeiraCarta.getAttribute('data-personagem');
     const segundoPersonagem = segundaCarta.getAttribute('data-personagem');
@@ -35,6 +43,8 @@ const checarCarta = () => {
 
         primeiraCarta = '';
         segundaCarta = '';
+
+        fimDeJogo();
 
     } else {
         setTimeout(() => {

@@ -12,11 +12,10 @@
 main {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 96.7%;
+    background-image: url('../imagens/background.jpg');
     background-size: cover;
     background-position: center;
-    background-image: url('../imagens/background2.jpg');
-    
     min-height: 100vh;
     align-items: center;
     justify-content: center;
@@ -31,7 +30,7 @@ main {
     font-size: 1.5em;
     width: 100%;
     padding: 30px;
-    max-width: 740px;
+    max-width: 750px;
     margin: 0 0 30px;
     border-radius: 5px;
 }

@@ -1,4 +1,5 @@
 const grid = document.querySelector('.grid');
+const spanPlayer = document.querySelector('.player')
 
 const personagens = [
     'a fror dite',
@@ -105,4 +106,9 @@ const carregarJogo = () => {
     });
 }
 
-carregarJogo()
+window.onload = () => {
+    const jogadorNome = localStorage.getItem('player');
+    spanPlayer.innerHTML = jogadorNome;
+
+    carregarJogo()
+}

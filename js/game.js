@@ -1,5 +1,6 @@
 const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player')
+const timer = document.querySelector('.timer');
 
 const personagens = [
     'a fror dite',
@@ -106,9 +107,18 @@ const carregarJogo = () => {
     });
 }
 
+const iniciarTempo = () => {
+
+    setInterval(() => { 
+    const tempoAtual = +timer.innerHTML;
+    timer.innerHTML = tempoAtual + 1;
+    }, 1000);
+}
+
 window.onload = () => {
     const jogadorNome = localStorage.getItem('player');
     spanPlayer.innerHTML = jogadorNome;
 
-    carregarJogo()
+    iniciarTempo();
+    carregarJogo();
 }

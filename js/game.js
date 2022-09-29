@@ -31,7 +31,8 @@ const fimDeJogo = () => {
     const desabilitarCartas = document.querySelectorAll('.acertou');
 
     if (desabilitarCartas.length === 24) {
-        alert("Parabéns, você venceu!")
+        clearInterval(this.loop);
+        alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML} segundos.`);
     }
 }
 
@@ -109,7 +110,7 @@ const carregarJogo = () => {
 
 const iniciarTempo = () => {
 
-    setInterval(() => { 
+    this.loop = setInterval(() => { 
     const tempoAtual = +timer.innerHTML;
     timer.innerHTML = tempoAtual + 1;
     }, 1000);

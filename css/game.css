@@ -51,6 +51,7 @@ main {
     position: relative;
     transition: all 400ms ease;
     transform-style: preserve-3d;
+    background: whitesmoke;
 }
 
 .face {

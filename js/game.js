@@ -108,12 +108,24 @@ const carregarJogo = () => {
     });
 }
 
-const iniciarTempo = () => {
+let segundos = 0;
+let minutos = 0;
 
-    this.loop = setInterval(() => { 
-    const tempoAtual = +timer.innerHTML;
-    timer.innerHTML = tempoAtual + 1;
-    }, 1000);
+
+
+const iniciarTempo = () => {
+    contador();
+    setInterval(contador, 1000);
+}
+
+const contador = () => {
+    segundos++
+    if(segundos == 59) {
+       minutos++
+       segundos = 0
+    }
+
+    timer.innerHTML = minutos + ':' + segundos;
 }
 
 window.onload = () => {

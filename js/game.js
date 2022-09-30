@@ -32,7 +32,7 @@ const fimDeJogo = () => {
 
     if (desabilitarCartas.length === 24) {
         clearInterval(this.loop);
-        alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML} segundos.`);
+        alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}.`);
     }
 }
 

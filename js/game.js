@@ -59,9 +59,7 @@ const checarCarta = () => {
             segundaCarta = '';
 
         }, 600)
-        
     }
-
 }
 
 const revelarCarta = ({target}) => {
@@ -111,7 +109,13 @@ const carregarJogo = () => {
 let segundos = 0;
 let minutos = 0;
 
-
+function doisDigitos(digit) {
+    if(digit < 10 ) {
+      return('0'+digit)
+    } else {
+      return(digit)
+    }
+}
 
 const iniciarTempo = () => {
     contador();
@@ -125,7 +129,7 @@ const contador = () => {
        segundos = 0
     }
 
-    timer.innerHTML = minutos + ':' + segundos;
+    timer.innerHTML = doisDigitos(minutos) + ':' + doisDigitos(segundos);
 }
 
 window.onload = () => {

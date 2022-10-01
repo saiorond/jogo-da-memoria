@@ -8,17 +8,21 @@ O projeto do jogo da memória consiste no antigo jogo já conhecido por muitos, 
 # Descrição do projeto
 
 ## Layout web
-#### Página Principal:
+#### Página de login:
 
-![Web index]()
+![Web index](https://github.com/saiorond/jogo-da-memoria/blob/main/prints/screencapture-jogo-da-memoria-zeta-vercel-app-2022-10-01-20_17_57.png)
 
-#### Tarefas: 
+#### Início do jogo:
 
-![Web required]()
+![Web requiered](https://github.com/saiorond/jogo-da-memoria/blob/main/prints/screencapture-jogo-da-memoria-zeta-vercel-app-paginas-jogo-html-2022-10-01-20_18_10.png)
 
-#### Tarefas concluídas e deletadas:
+#### Interação do usuário com o jogo: 
 
-![Web required]()
+![Web required](https://github.com/saiorond/jogo-da-memoria/blob/main/prints/screencapture-127-0-0-1-5500-paginas-jogo-html-2022-10-01-20_39_46.png)
+
+#### Jogo concluído:
+
+![Web required](https://github.com/saiorond/jogo-da-memoria/blob/main/prints/screencapture-jogo-da-memoria-zeta-vercel-app-paginas-jogo-html-2022-10-01-20_21_26.png)
 
 # Tecnologias utilizadas
 

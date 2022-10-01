@@ -2,7 +2,7 @@
 
 # Sobre o projeto
 
-O projeto do jogo da memória consiste no antigo jogo já conhecido por muitos, com personagens inspirados na mitologia grega. Além de você ter que encontrar o par da carta, há também um contador de tempo para você saber como se saiu na partida. Eu utilizei HTML, CSS e JavaScript para essa aplicação. Trabalhei com arrays e métodos como o sort(). 
+O projeto do jogo da memória consiste no antigo jogo já conhecido por muitos, com personagens inspirados na mitologia grega. Além de você ter que encontrar o par da carta, há também um contador de tempo para você saber como se saiu na partida. Eu utilizei HTML, CSS e JavaScript para essa aplicação. Trabalhei com arrays e métodos como o sort(). E pude me apronfudar no Grid.
 
 
 # Descrição do projeto

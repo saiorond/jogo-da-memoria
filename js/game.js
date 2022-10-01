@@ -31,7 +31,7 @@ const fimDeJogo = () => {
     const desabilitarCartas = document.querySelectorAll('.acertou');
 
     if (desabilitarCartas.length === 24) {
-        clearInterval(this.loop);
+        clearInterval(comecar);
         alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}.`);
     }
 }
@@ -108,6 +108,7 @@ const carregarJogo = () => {
 
 let segundos = 0;
 let minutos = 0;
+let comecar = 0;
 
 function doisDigitos(digit) {
     if(digit < 10 ) {
@@ -119,7 +120,7 @@ function doisDigitos(digit) {
 
 const iniciarTempo = () => {
     contador();
-    setInterval(contador, 1000);
+    comecar = setInterval(contador, 1000);
 }
 
 const contador = () => {
